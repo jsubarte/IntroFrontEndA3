@@ -1,0 +1,60 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    background-color: blueviolet;
+}
+
+.banner{
+    text-align: left;
+    font-family: 'Caveat', cursive;
+    color: white;
+    font-size: 2.5em;
+    display: inline-block;
+}
+
+#menuPral{
+    float: right;
+}
+
+#grid-Prod{
+    display: flex;
+    padding-top: 7%;
+}
+
+#modal-Prod .modal-dialog .modal-content{
+    background: rgba(0, 0, 0, 0.7);
+    color: #FF851B;
+}
+
+#form-Productos{
+    width: 100%;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+
+#form-Productos .form-etiqueta{
+    display: block;
+    font-family: sans-serif;
+    position: relative;
+}
+
+#descripcion{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #FF851B;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: sans-serif;
+}

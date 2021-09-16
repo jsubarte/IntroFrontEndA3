@@ -58,3 +58,7 @@ header{
     font-size: 14px;
     font-family: sans-serif;
 }
+
+.hidden {
+    display: none;
+}

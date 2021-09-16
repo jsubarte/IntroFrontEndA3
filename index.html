@@ -97,18 +97,21 @@
                   <button type="button" class="btn-close btn-warning" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" id="form-Productos">
+                    <form action="" id="form-Productos" novalidate>
                         <label for="titulo" class="form-etiqueta">Titulo: </label>
-                        <input type="text" class="form-input" id="titulo" placeholder="Inserte el titulo">
+                        <input type="text" class="form-input form-control" id="titulo" placeholder="Inserte el titulo" required>
+                        <span class="hidden" id="titulo-error"></span>
                         <label for="precio" class="form-etiqueta">Precio: </label>
-                        <input type="text" class="form-input" id="precio" placeholder="Inserte el precio">
+                        <input type="number" min="0" max="100" class="form-input" id="precio" placeholder="Inserte el precio">
+                        <span class="hidden" id="precio-error"></span>
                         <label for="descripcion" class="form-etiqueta">Descripción: </label>
                         <textarea class="form-textarea" id="descripcion" placeholder="Inserte la descripcion" cols="30" rows="10"></textarea>
+                        <span class="hidden" id="descripcion-error"></span>
                     </form>
                 </div>
                 <div class="modal-footer">
                   <button id="btn-mf-cerrar" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Añadir</button>
+                  <button type="button" class="btn btn-primary" id="btn-anadir">Añadir</button>
                 </div>
               </div>
             </div>
@@ -116,5 +119,7 @@
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="./assets/js/validations.js"></script>
+        <script src="./assets/js/index.js"></script>
     </body>
 </html>

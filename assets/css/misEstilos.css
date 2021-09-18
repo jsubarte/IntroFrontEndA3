@@ -10,6 +10,12 @@ header{
     background-color: blueviolet;
 }
 
+footer{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+
 .banner{
     text-align: left;
     font-family: 'Caveat', cursive;
@@ -57,4 +63,9 @@ header{
     border-radius: 2px;
     font-size: 14px;
     font-family: sans-serif;
+}
+
+.card-prec{
+    width: fit-content !important;
+    float: right;
 }

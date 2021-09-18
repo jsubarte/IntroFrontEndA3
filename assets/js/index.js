@@ -18,13 +18,14 @@ const clearForm = () => {
 
 const addProduct = () => {
   const col = document.createElement("article");
-  col.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3");
+  col.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3", "p-2");
 
   const card = document.createElement("div");
   card.classList.add("card");
   
   const image = document.createElement("img");
   image.classList.add("card-img-top");
+  image.classList.add("img-thumbnail");
   image.src = "https://source.unsplash.com/random";
 
   const cardBody = document.createElement("section");
@@ -34,11 +35,16 @@ const addProduct = () => {
   cardTitle.classList.add("card-title")
   cardTitle.innerText = titleInput.value;
 
+  const cardPrecio = document.createElement("p");
+  cardPrecio.classList.add("card-prec");
+  cardPrecio.innerText = "$ " + priceInput.value;
+
   const cardDescription = document.createElement("p");
   cardDescription.classList.add("card-text");
   cardDescription.innerText = descriptionInput.value;
 
   cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardPrecio);
   cardBody.appendChild(cardDescription)
   card.appendChild(image);
   card.appendChild(cardBody);

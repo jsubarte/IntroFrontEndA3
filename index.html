@@ -26,12 +26,12 @@
         </header>
         <!-- FIN ENCABEZADO -->
 
-        <section id="grid-Prod" class="container">
+        <section id="grid-Prod" class="container pb-5">
 
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
-                        <img src="https://source.unsplash.com/random" class="card-img-top" alt="Random Image">
+                        <img src="https://source.unsplash.com/random" class="card-img-top img-thumbnail" alt="Random Image">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -42,7 +42,7 @@
                 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
-                        <img src="https://source.unsplash.com/random" class="card-img-top" alt="Random Image">
+                        <img src="https://source.unsplash.com/random" class="card-img-top img-thumbnail" alt="Random Image">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -53,7 +53,7 @@
     
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
-                        <img src="https://source.unsplash.com/random" class="card-img-top" alt="Random Image">
+                        <img src="https://source.unsplash.com/random" class="card-img-top img-thumbnail" alt="Random Image">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -64,18 +64,7 @@
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
-                        <img src="https://source.unsplash.com/random" class="card-img-top" alt="Random Image">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/random" class="card-img-top" alt="Random Image">
+                        <img src="https://source.unsplash.com/random" class="card-img-top img-thumbnail" alt="Random Image">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -88,6 +77,20 @@
 
         </section>
 
+        <!-- PIE DE PAGINA -->
+        <footer class="bg-dark pt-3 pb-3">
+          <div class="container">
+            <div class="row text-white">
+              <div class="col-2">Sánchez, Joel</div>
+              <div class="col-2">Flores, Edison</div>
+              <div class="col-3">Máster en Full Stack Web Development</div>
+              <div class="col-2">Three Points</div>
+              <div class="col-3">Universidad Politécnica de Cataluña</div>
+            </div>
+          </div>
+        </footer>
+        <!-- FIN PIE DE PAGINA -->
+
         <!-- MODAL -->
         <div id="modal-Prod" class="modal" tabindex="-1">
             <div class="modal-dialog">
@@ -98,12 +101,15 @@
                 </div>
                 <div class="modal-body">
                     <form action="" id="form-Productos">
-                        <label for="titulo" class="form-etiqueta">Titulo: </label>
-                        <input type="text" class="form-input" id="titulo" placeholder="Inserte el titulo">
-                        <label for="precio" class="form-etiqueta">Precio: </label>
-                        <input type="text" class="form-input" id="precio" placeholder="Inserte el precio">
-                        <label for="descripcion" class="form-etiqueta">Descripción: </label>
-                        <textarea class="form-textarea" id="descripcion" placeholder="Inserte la descripcion" cols="30" rows="10"></textarea>
+                      <label for="titulo" class="form-etiqueta">Titulo: </label>
+                      <input type="text" class="form-input form-control" id="titulo" placeholder="Inserte el titulo" required>
+                      <span class="hidden" id="titulo-error"></span>
+                      <label for="precio" class="form-etiqueta">Precio: </label>
+                      <input type="number" min="0" max="100" class="form-input" id="precio" placeholder="Inserte el precio">
+                      <span class="hidden" id="precio-error"></span>
+                      <label for="descripcion" class="form-etiqueta">Descripción: </label>
+                      <textarea class="form-textarea" id="descripcion" placeholder="Inserte la descripcion" cols="30" rows="10"></textarea>
+                      <span class="hidden" id="descripcion-error"></span>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -116,5 +122,7 @@
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="./assets/js/validations.js"></script>
+        <script src="./assets/js/index.js"></script>
     </body>
 </html>
